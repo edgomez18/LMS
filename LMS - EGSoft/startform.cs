@@ -37,7 +37,7 @@ namespace LMS___EGSoft
 
         private void startseccionbtn_Click(object sender, EventArgs e)
         {
-            SQLiteConnection cnx = new SQLiteConnection("Data Source=C:\\Programacion\\LMS\\LMSDataBase.db;Version=3;");
+            /*SQLiteConnection cnx = new SQLiteConnection("Data Source=C:\\Programacion\\LMS\\LMSDataBase.db;Version=3;");
             cnx.Open();
             string query = "Select user, pass from userpass where user='" + usercb.Text + "' and pass = '" + passwordtxt + "'";
             SQLiteCommand cmd = new SQLiteCommand(query, cnx);
@@ -58,7 +58,12 @@ namespace LMS___EGSoft
                 MessageBox.Show("Usuario o Contraseña invalida, intente de nuevo. Si cree que es un problema, contacte al Administrador", "Error");
                 usercb.Text = "";
                 passwordtxt.Clear();
-            }
+
+            
+            }*/
+            this.Hide();
+            Home H = new Home();
+            H.Show();
         }
     }
 }
