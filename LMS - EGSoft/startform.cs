@@ -61,8 +61,9 @@ namespace LMS___EGSoft
 
             
             }*/
-            this.Hide();
             Home H = new Home();
+            //H.MdiParent = this;
+            this.Hide();
             H.Show();
         }
     }
