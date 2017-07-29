@@ -20,7 +20,20 @@ namespace LMS___EGSoft
 
         private void startseccion_Load(object sender, EventArgs e)
         {
-            this.usercb.Focus();
+            SQLiteConnection cnx = new SQLiteConnection("Data Source=C:\\Programacion\\LMS\\LMSDataBase.db;Version=3;");
+            try
+            {
+                cnx.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+
+            }
+            SQLiteDataAdapter adac = new SQLiteDataAdapter("Select * from userpass", cnx);
+            DataTable tabla = new DataTable("Roster");
+            adac.Fill(tabla);
+            dataGridView1.DataSource = tabla;
         }
 
         private void nouserll_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

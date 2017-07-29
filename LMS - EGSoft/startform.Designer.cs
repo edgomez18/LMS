@@ -32,12 +32,14 @@
             this.passwordtxt = new System.Windows.Forms.TextBox();
             this.usercb = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.startseccionbtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.nouserll = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
+            this.nouserll = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.startseccionbtn = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // passwordtxt
@@ -64,22 +66,12 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // startseccionbtn
+            // button1
             // 
-            resources.ApplyResources(this.startseccionbtn, "startseccionbtn");
-            this.startseccionbtn.Name = "startseccionbtn";
-            this.startseccionbtn.UseVisualStyleBackColor = true;
-            this.startseccionbtn.Click += new System.EventHandler(this.startseccionbtn_Click);
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // nouserll
             // 
@@ -88,23 +80,41 @@
             this.nouserll.TabStop = true;
             this.nouserll.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.nouserll_LinkClicked);
             // 
-            // button1
+            // label2
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // startseccionbtn
+            // 
+            resources.ApplyResources(this.startseccionbtn, "startseccionbtn");
+            this.startseccionbtn.Name = "startseccionbtn";
+            this.startseccionbtn.UseVisualStyleBackColor = true;
+            this.startseccionbtn.Click += new System.EventHandler(this.startseccionbtn_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.Name = "dataGridView1";
             // 
             // startseccion
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.Name = "startseccion";
             this.Load += new System.EventHandler(this.startseccion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -119,6 +129,7 @@
         public System.Windows.Forms.Button startseccionbtn;
         public System.Windows.Forms.LinkLabel nouserll;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
