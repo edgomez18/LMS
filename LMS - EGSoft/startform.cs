@@ -20,7 +20,7 @@ namespace LMS___EGSoft
 
         private void startseccion_Load(object sender, EventArgs e)
         {
-            SQLiteConnection cnx = new SQLiteConnection("Data Source=C:\\Programacion\\LMS\\LMSDataBase.db;Version=3;");
+            SQLiteConnection cnx = new SQLiteConnection("Data Source=C:\\Programacion\\LMSDataBase.db;Version=3;");
             try
             {
                 cnx.Open();
@@ -30,7 +30,7 @@ namespace LMS___EGSoft
                 MessageBox.Show(ex.Message, "Error");
 
             }
-            SQLiteDataAdapter adac = new SQLiteDataAdapter("Select * from userpass", cnx);
+            SQLiteDataAdapter adac = new SQLiteDataAdapter("Select * from pop", cnx);
             DataTable tabla = new DataTable("Roster");
             adac.Fill(tabla);
             dataGridView1.DataSource = tabla;
